@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LC50 Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5 mb-4 text-center">LC50 Prediction</h1>
+        <form action="{{ url_for('predict') }}" method="POST" class="mt-4">
+            <div class="form-group">
+                <label for="descriptor1">MLOGP :</label>
+                <input type="number" step="any" class="form-control" id="descriptor1" name="descriptor1" required>
+            </div>
+            <div class="form-group">
+                <label for="descriptor2">CIC0 :</label>
+                <input type="number" step="any" class="form-control" id="descriptor2" name="descriptor2" required>
+            </div>
+            <div class="form-group">
+                <label for="descriptor3">GATS1i:</label>
+                <input type="number" step="any" class="form-control" id="descriptor3" name="descriptor3" required>
+            </div>
+            <div class="form-group">
+                <label for="descriptor4">NdssC:</label>
+                <input type="number" step="any" class="form-control" id="descriptor4" name="descriptor4" required>
+            </div>
+            <div class="form-group">
+                <label for="descriptor5">NdsCH:</label>
+                <input type="number" step="any" class="form-control" id="descriptor5" name="descriptor5" required>
+            </div>
+            <div class="form-group">
+                <label for="descriptor6">SM1_Dz(Z:</label>
+                <input type="number" step="any" class="form-control" id="descriptor6" name="descriptor6" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Predict</button>
+        </form>
+    </div>
+</body>
+</html>
